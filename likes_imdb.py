@@ -36,7 +36,7 @@ print("Test 3: Linear Regression — Facebook Likes vs. IMDB Score")
 print("="*60)
 
 # Print the regression equation
-print("\n📊 Model Summary:")
+print("\n Model Summary:")
 print(model.summary())
 
 # Confidence Interval
@@ -51,23 +51,23 @@ p_value = model.pvalues['movie_facebook_likes']
 r_squared = model.rsquared
 slope_ci = ci.loc['movie_facebook_likes']
 
-print("\n🧾 Interpretation:")
+print("\n Interpretation:")
 print(f"• Regression Coefficient (Slope): {slope:.4f}")
 print(f"• R-squared: {r_squared:.4f}")
 print(f"• 95% CI for Slope: ({slope_ci[0]:.4f}, {slope_ci[1]:.4f})")
 
 # Hypothesis Testing Interpretation
 alpha = 0.05
-print("\n📌 Hypothesis Test:")
+print("\n Hypothesis Test:")
 print("H₀: The number of Facebook likes and the IMDB score are not correlated.")
 print("H₁: There is a statistically significant correlation between the number of Facebook likes and the IMDB score.")
 
 if p_value < alpha:
-    print(f"✅ p-value < {alpha}, reject the null hypothesis (H₀).")
-    print("👉 Conclusion: There IS a statistically significant relationship between the number of Facebook likes and the IMDB score.")
+    print(f" p-value < {alpha}, reject the null hypothesis (H₀).")
+    print(" Conclusion: There IS a statistically significant relationship between the number of Facebook likes and the IMDB score.")
 else:
-    print(f"❌ p-value ≥ {alpha}, fail to reject the null hypothesis (H₀).")
-    print("👉 Conclusion: There is NO statistically significant relationship between the number of Facebook likes and the IMDB score.")
+    print(f" p-value ≥ {alpha}, fail to reject the null hypothesis (H₀).")
+    print(" Conclusion: There is NO statistically significant relationship between the number of Facebook likes and the IMDB score.")
 
 # Plot with regression line
 plt.figure(figsize=(8, 5))
