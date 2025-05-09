@@ -30,7 +30,7 @@ print("\n" + "="*60)
 print("Test 2: Linear Regression — Duration vs. Number of Critic Reviews")
 print("="*60)
 
-print("\n📊 Model Summary:")
+print("\n Model Summary:")
 print(model.summary())
 
 # Confidence Interval
@@ -53,7 +53,7 @@ print(f"• 95% CI for Slope: ({slope_ci[0]:.4f}, {slope_ci[1]:.4f})")
 
 # Hypothesis Testing Interpretation
 alpha = 0.05
-print("\n📌 Hypothesis Test:")
+print("\n Hypothesis Test:")
 print("H₀: Duration and number of critic reviews are independent.")
 print("H₁: Duration significantly predicts the number of critic reviews.")
 
