@@ -45,7 +45,7 @@ p_value = model.pvalues['duration']
 r_squared = model.rsquared
 slope_ci = ci.loc['duration']
 
-print("\n🧾 Interpretation:")
+print("\n Interpretation:")
 print(f"• Regression Coefficient (Slope): {slope:.4f}")
 print(p_value)
 print(f"• R-squared: {r_squared:.4f}")
@@ -58,11 +58,11 @@ print("H₀: Duration and number of critic reviews are independent.")
 print("H₁: Duration significantly predicts the number of critic reviews.")
 
 if p_value < alpha:
-    print(f"✅ p-value < {alpha}, reject the null hypothesis (H₀).")
-    print("👉 Conclusion: There IS a statistically significant relationship between movie duration and the number of critic reviews.")
+    print(f" p-value < {alpha}, reject the null hypothesis (H₀).")
+    print(" Conclusion: There IS a statistically significant relationship between movie duration and the number of critic reviews.")
 else:
-    print(f"❌ p-value ≥ {alpha}, fail to reject the null hypothesis (H₀).")
-    print("👉 Conclusion: There is NO statistically significant relationship between movie duration and the number of critic reviews.")
+    print(f" p-value ≥ {alpha}, fail to reject the null hypothesis (H₀).")
+    print(" Conclusion: There is NO statistically significant relationship between movie duration and the number of critic reviews.")
 
 # Plot with regression line
 plt.figure(figsize=(8, 5))
